@@ -1,0 +1,432 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #121212; /* Dark gray/black */
+}
+
+/* Navbar Styling */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 62px;
+  z-index: 10;
+  top: 0;
+  
+}
+
+nav img {
+  width: 190px;
+  margin-top: 20px;
+  margin-right: 250px;
+}
+
+nav button {
+  padding: 3px 8px;
+  font-size: 16px;
+  background-color: #f34202;
+  color: white;
+  border: none;
+   margin-top: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+}
+
+/* Main Section with Darker Header/Footer */
+.main {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), 
+                    url('background.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding-top: 70px;
+  margin-top: -65px;
+}
+
+/* Extra Dark Overlay */
+.main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Hero Content Centering */
+.hero {
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+}
+
+/* Hero Text Styles */
+.hero span:first-child {
+  font-family: 'Netflix Sans', 'Helvetica Neue', 'Segoe UI', Roboto, Ubuntu, sans-serif;
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 70px;
+  color: rgb(255, 255, 255);
+}
+
+.hero span:nth-child(2),
+.hero span:nth-child(3) {
+  font-family: 'Netflix Sans', 'Helvetica Neue', 'Segoe UI', Roboto, Ubuntu, sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  margin-top: 10px;
+}
+
+/* Input Field */
+.hero input[type="text"] {
+  font-family: 'Netflix Sans', 'Helvetica Neue', 'Segoe UI', Roboto, Ubuntu, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid #e9e7e7;
+  border-radius: 5px;
+  padding: 10px 15px;
+  width: 300px;
+  height: 40px; /* Increased height */
+  margin-top: 20px;
+}
+
+.hero input[type="text"]:focus {
+  border-color: #bab5b4;
+  outline: none;
+}
+
+/* Button Styling */
+
+.hero button {
+  font-size: 24px;
+  color: white;
+  background-color: #f30202;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 35px; /* Increased padding to make it bigger */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: 50px; /* Increased height */
+  margin-top: 30px; /* Moved the button slightly down */
+}
+
+/* Button Hover Effect */
+.hero button:hover {
+  background-color: rgb(196, 14, 14);
+}
+
+.seperation{
+  height: 3px; /* Slightly thicker line */
+  background: linear-gradient(to right, #4f0202,  #d42828, #4f0202); /* Rainbow effect */
+  width: 100%; /* Full width */
+  border-radius: 50px;
+  padding: 1px;
+  transform: translateY(-50%);
+  background: linear-gradient(to right, #4f0202, #d42828, #4f0202);
+ clip-path: polygon(0% 30%, 0% 60%, 60% 90%, 100% 50%, 90% 0%, 30% 0%); 
+ 
+
+}
+
+ .seperation h1{
+  color: white;
+  margin-top: 40px; /* Adds space above the heading to push it down */
+  margin-left: 150px; /* Moves the heading a little towards the left */
+  font-size: 25px;
+ }
+
+  
+
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 90px;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+/* Image slider */
+.Imgslide {
+  display: flex;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.Imgslide img {
+  width: 200px;
+  height: auto;
+  border-radius: 20px; /* Rounded corners */
+  transition: transform 0.3s ease-in-out;
+}
+
+.Imgslide img:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Slider buttons */
+.leftbutton, .rightbutton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgb(66, 63, 63);
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 5px;
+  font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
+  font-weight: 400;
+  height: 17vh;
+  width: 25px;
+  display: flex;           /* Make the button a flex container */
+  justify-content: center; /* Center text horizontally */
+  align-items: center;     /* Center text vertically */
+  
+  
+}
+.leftbutton { 
+  left: 0;
+  margin-left: 9%;
+ 
+}
+.rightbutton { 
+  right: 0;
+  margin-right: 9%;
+ }
+
+/* More Reasons to Join Section */
+.second {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.second h1{
+  color: white;
+  font-size: 25px;
+  margin-top: 5%;
+  margin-bottom: 1%;
+  margin-right: 60%;
+}
+
+
+
+/* Box container */
+.box-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap; /* Makes it responsive */
+  height: 45vh;
+}
+
+/* Styling for each box with radial gradient */
+.box1, .box2, .box3, .box4 {
+  width: 250px; /* Medium width */
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+  background: radial-gradient(circle, rgba(35, 51, 74, 1) 0%, rgba(51, 3, 22, 1) 100%);
+  /* Radial gradient effect from blue to pinkish */
+  position: relative; /* Ensures the image is positioned relative to this box */
+}
+
+/* First span inside each box (bold and bigger text) */
+.box1 span:first-child,
+.box2 span:first-child,
+.box3 span:first-child,
+.box4 span:first-child {
+  font-weight: bold;
+  font-size: 22px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Positioning the image inside .box1 */
+.box1 img,
+.box2 img,
+.box3 img,
+.box4 img  {
+    position: absolute;
+    bottom: 10px; /* Distance from the bottom */
+    right: 10px;  /* Distance from the right */
+    width: 70px;  /* Adjust size as needed */
+    height: auto;
+    border-radius: 5px; /* Optional: For rounded corners on images */
+}
+
+/* FAQ Section Styling */
+.FAQ {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.FAQ h1 {
+  color: white;
+  font-size: 25px;
+  margin-top: 30px;
+  margin-right: 45%;
+  margin-bottom: 1%;
+
+}
+
+.FAQBox {
+  display: flex;
+  flex-direction: column; /* Arrange the boxes vertically */
+  gap: 8px;
+  align-items: center;
+}
+
+/* Styling for each FAQ item (box style) */
+.FAQBox div {
+  background-color: rgb(59, 56, 56);
+  color: white;
+  padding: 10px 15px;  /* Reduced padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 55px; /* Adjusted height to be shorter */
+  width: 890px;  /* Medium width */
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* FAQ box hover effect */
+.FAQBox div:hover {
+  background-color: #666;  /* Darken background on hover */
+}
+
+.FAQBox i {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+
+.third {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.third input[type="text"] {
+  font-weight: 400;
+  font-size: 16px;
+  color: white;
+  background-color: rgb(33, 33, 46);
+  border: 2px solid #e9e7e7;
+  border-radius: 5px;
+  padding: 10px 15px;
+  width: 500px;
+  height: 35px;
+  margin-top: 20px;
+}
+
+.third input[type="text"]:focus {
+  border-color: #ffffff;
+  outline: none;
+}
+
+.third span {
+  font-size: 19px;
+  font-weight: 300;
+  color: rgb(255, 255, 255);
+  display: block;
+  margin-bottom: 3px;
+}
+
+.footerbutton {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.footerbutton:hover {
+  background-color:rgb(196, 14, 14);
+}
+
+
+.footer {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.footer a {
+  color: #cdc4c4;
+  text-decoration: none;
+  font-size: 15px;
+  display: block;
+  margin-bottom: 10px; /* Reduced margin */
+  text-decoration: underline;
+  margin-right: 15px;
+}
+
+.footer p 
+{
+  color: #cdc4c4;
+  margin-right: 80%;
+  margin-bottom: 2%;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 8px; /* Reduced gap */
+  margin-right: 20%;
+  justify-items: flex-start;
+}
+
+.footer-bottom 
+{
+  margin-left: 1%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+  color: #ebe7e7;
+}
+
+.lang-select {
+  background-color: rgb(49, 47, 47); /* Set button color to gray */
+  color: white;
+  border: 1px solid rgb(157, 153, 153);
+  padding: 6px;
+  border-radius: 3px;
+  margin-bottom: 11px; /* Adds space between dropdown and "Netflix Pakistan" */
+}
+
+.footer-bottom p {
+  margin: 0; /* Remove extra margin */
+}
